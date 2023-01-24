@@ -1,6 +1,20 @@
-import std.stdio;
+import raylib;
+import lightwork.scenes;
 
 void main()
 {
-	writeln("Edit source/app.d to start your project.");
+	validateRaylibBinding();
+	InitWindow(800, 600, "Lightwork");
+	SetTargetFPS(60);
+
+	MainScene currentScene = new MainScene();
+
+	while (!WindowShouldClose())
+	{
+		currentScene.processInput();
+		currentScene.update();
+		currentScene.render();
+	}
+
+	CloseWindow();
 }

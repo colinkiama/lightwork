@@ -6,6 +6,10 @@
 	"dependencies": {
 		"raylib-d": "~>4.2.4"
 	},
+	"libs": ["raylib"],
+	"lflags-posix": ["-L."],
+	"lflags-osx": ["-rpath", "@executable_path/"],
+	"lflags-linux": ["-rpath=$$ORIGIN"],
 	"description": "A puzzle game about interacting with light",
 	"license": "MIT",
 	"name": "lightwork"
