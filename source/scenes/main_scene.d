@@ -7,11 +7,22 @@ import std.stdio;
 public class MainScene : Scene
 {
 
+    private Vector2 mirrorPosition = {0, 0};
+
     private Vector2 start = {0, 0};
     private Vector2 end = {300.0f, 300.0f};
 
     private Vector2 lineStart = {25.0f, 25.0f};
     private Vector2 lineEnd = {300.0f, 300.0f};
+
+    this()
+    {
+        int mirrorPositionY = GetRenderHeight() - 25;
+
+        mirrorPosition.x = 25.0f;
+        mirrorPosition.y = cast(float) GetRenderHeight() - 25.0f;
+
+    }
 
     override void processInput()
     {
@@ -35,7 +46,8 @@ public class MainScene : Scene
     {
         BeginDrawing();
         ClearBackground(Colors.RAYWHITE);
-        DrawCircle(25, 25, 25, Colors.BLUE);
+        // DrawCircle(25, 25, 25, Colors.BLUE);
+        DrawCircleV(mirrorPosition, 25, Colors.BLUE);
         DrawLineEx(lineStart, lineEnd, 2.0f, Colors.RED);
         EndDrawing();
     }
