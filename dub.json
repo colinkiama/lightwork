@@ -1,0 +1,12 @@
+{
+	"authors": [
+		"Colin Kiama"
+	],
+	"copyright": "Copyright © 2023, Colin Kiama",
+	"dependencies": {
+		"raylib-d": "~>4.2.4"
+	},
+	"description": "A puzzle game about interacting with light",
+	"license": "MIT",
+	"name": "lightwork"
+}

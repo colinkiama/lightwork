@@ -1,0 +1,17 @@
+.dub
+docs.json
+__dummy.html
+docs/
+/lightwork
+lightwork.so
+lightwork.dylib
+lightwork.dll
+lightwork.a
+lightwork.lib
+lightwork-test-*
+*.exe
+*.pdb
+*.o
+*.obj
+*.lst
+libraylib.so*
